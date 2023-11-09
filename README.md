@@ -50,6 +50,9 @@ Pour eteindre toute les leds relies a GPIO A : OPCode :0100000 W/R:0 Address: 00
 Pour eteindre toute les leds relies a GPIO B : OPCode :0100000 W/R:0 Address: 0001 0011 Data: 0000 0000 
 On envoi au total 18 octets au composant
 
+4.2 Parametre du microcontroleur 
+
+<img width="616" alt="image" src="https://github.com/AbdelBoutiche/2023_1D_S5_SystNum_Boutiche_Beugre/assets/125290396/1edb56d3-7bd7-4de2-a8ab-383f579f09b5">
 
 
 
