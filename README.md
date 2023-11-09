@@ -36,4 +36,20 @@ différent
 12)Chaque registre correspond a un bloc de pins, si on veut ecrire sur un pin particulier il faut ecrire sur son registre attribue, les IODIR contiennent toute les entree/sorties, les GPIO tous les GPIO.
 13)En mettant tous les bits des registres GPIOA et GPIOB a 1, cela permet d'allumer toute les leds
 14)En mettant tous les bits des registres GPIOA et GPIOB a 0, cela permet d'eteindre toute les leds
-15)Pour allumer seulement la led D508 il faut mettre le 8e bit du registre GPIOB a 1 
+15)Pour allumer seulement la led D508 il faut mettre le 8e bit du registre GPIOB a 1
+16) Pour configurer l'ensemble des pins correctement,
+La trame a envoyer pour configurer toute les GPIOA en sortie (mise a 0)  : OPCode :0100000 W/R:0 Address: 0000 0000 Data: 0000 0000
+La trame a envoyer pour configurer toute les GPIOB en sortie (mise a 0)  : OPCode :0100000 W/R:0 Address: 0000 0001 Data: 0000 0000
+
+La trame a envoyer pour allumer toute les leds:
+Pour allumer toute les leds relies a GPIO A : OPCode :0100000 W/R:0 Address: 0001 0010 Data: 1111 1111
+Pour allumer toute les leds relies a GPIO B : OPCode :0100000 W/R:0 Address: 0001 0011 Data: 1111 1111
+
+La trame a envoyer pour eteindre toute les leds:
+Pour eteindre toute les leds relies a GPIO A : OPCode :0100000 W/R:0 Address: 0001 0010 Data: 0000 0000
+Pour eteindre toute les leds relies a GPIO B : OPCode :0100000 W/R:0 Address: 0001 0011 Data: 0000 0000 
+On envoi au total 18 octets au composant
+
+
+
+
