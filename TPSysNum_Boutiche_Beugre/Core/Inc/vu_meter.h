@@ -4,6 +4,7 @@
  *  Created on: Nov 9, 2023
  *      Author:
  */
+#include "spi.h"
 
 #ifndef INC_VU_METER_H_
 #define INC_VU_METER_H_

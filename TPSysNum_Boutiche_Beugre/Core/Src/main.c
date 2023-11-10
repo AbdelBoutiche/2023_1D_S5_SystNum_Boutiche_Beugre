@@ -24,7 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "vu_meter.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -63,6 +63,7 @@ void SystemClock_Config(void);
   * @brief  The application entry point.
   * @retval int
   */
+h_vu_t h_vu;
 int main(void)
 {
   /* USER CODE BEGIN 1 */
@@ -95,10 +96,13 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  vu_init(&h_vu);
   while (1)
   {
     /* USER CODE END WHILE */
-
+	  vu_led(&h_vu,0,3,0);
+	  vu_led(&h_vu,1,3,0);
+	  HAL_Delay(100);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
